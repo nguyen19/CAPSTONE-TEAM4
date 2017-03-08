@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bf9a98f19405410596760cc5093dc7d0" Name="Diagram1">
+        <EntityTypeShape EntityType="CapstoneModel.attribute" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CapstoneModel.attributes_set" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CapstoneModel.bill" Width="1.5" PointX="9.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CapstoneModel.bill_detail" Width="1.5" PointX="12" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CapstoneModel.category" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CapstoneModel.customer" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CapstoneModel.good" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="CapstoneModel.goods_to_attributes" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CapstoneModel.group_goods_quantity_stock" Width="1.5" PointX="5.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CapstoneModel.group_outpound_goods" Width="1.5" PointX="12" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CapstoneModel.outbound" Width="1.5" PointX="9.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CapstoneModel.role_staff" Width="1.5" PointX="5.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CapstoneModel.staff" Width="1.5" PointX="7.5" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CapstoneModel.state_bill" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="CapstoneModel.state_goods" Width="1.5" PointX="9.75" PointY="2" IsExpanded="true" />
+        <AssociationConnector Association="CapstoneModel.fk_attributes_attributes_set" ManuallyRouted="false" />
+        <AssociationConnector Association="CapstoneModel.fk_goods_to_attributes_goods_attributes" ManuallyRouted="false" />
+        <AssociationConnector Association="CapstoneModel.fk_attprimary_set_categories" ManuallyRouted="false" />
+        <AssociationConnector Association="CapstoneModel.fk_bill_customer" ManuallyRouted="false" />
+        <AssociationConnector Association="CapstoneModel.fk_bill_detail_bill" ManuallyRouted="false" />
+        <AssociationConnector Association="CapstoneModel.fk_bill_goods_to_attributes" ManuallyRouted="false" />
+        <AssociationConnector Association="CapstoneModel.fk_bill_staff" ManuallyRouted="false" />
+        <AssociationConnector Association="CapstoneModel.fk_bill_detail_goods_to_attributes" ManuallyRouted="false" />
+        <AssociationConnector Association="CapstoneModel.fk_goods_categories" ManuallyRouted="false" />
+        <AssociationConnector Association="CapstoneModel.fk_goods_to_attributes_goods" ManuallyRouted="false" />
+        <AssociationConnector Association="CapstoneModel.fk_goods_to_attributes_group_goods_quantity_stock_id_group_goods_attributes" ManuallyRouted="false" />
+        <AssociationConnector Association="CapstoneModel.fk_group_outpound_goods_group_goods_quantity_stock" ManuallyRouted="false" />
+        <AssociationConnector Association="CapstoneModel.fk_group_outpound_outpound" ManuallyRouted="false" />
+        <AssociationConnector Association="CapstoneModel.fk_outbound_staff" ManuallyRouted="false" />
+        <AssociationConnector Association="CapstoneModel.fk_staff_role_staff" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CapstoneModel.group_agency_goods" Width="1.5" PointX="7.5" PointY="14.125" />
+        <EntityTypeShape EntityType="CapstoneModel.database_firewall_rules" Width="1.5" PointX="12.375" PointY="0.75" />
+        <AssociationConnector Association="CapstoneModel.fk_group_agency_goods_group_goods_quantity_stock" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

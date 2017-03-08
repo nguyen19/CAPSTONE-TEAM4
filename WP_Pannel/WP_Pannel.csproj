@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C63F17C2-7D7F-4651-B01B-07D1692FCFBD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WP_Pannel</RootNamespace>
+    <AssemblyName>WP_Pannel</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business Layer\Function.cs" />
+    <Compile Include="Business Layer\Function_Staff.cs" />
+    <Compile Include="Business Layer\Funnction_Customer.cs" />
+    <Compile Include="Data Acess\attribute.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\attributes_set.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\bill.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\bill_detail.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\category.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\customer.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\DataAcess.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataAcess.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\DataAcess.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\DataAcess.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataAcess.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\database_firewall_rules.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\good.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\goods_to_attributes.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\group_agency_goods.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\group_goods_quantity_stock.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\group_outpound_goods.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\outbound.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\role_staff.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_attributes_search_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_attributes_select_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_attributes_set_search_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_attributes_set_select_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_bill_detail_search_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_bill_detail_select_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_bill_search_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_bill_select_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_categories_search_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_categories_select_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_customer_search_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_customer_select_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_goods_search_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_goods_select_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_goods_to_attributes_search_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_goods_to_attributes_select_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_group_agency_goods_search_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_group_agency_goods_select_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_group_goods_quantity_stock_search_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_group_goods_quantity_stock_select_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_group_outpound_goods_search_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_group_outpound_goods_select_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_outbound_search_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_outbound_select_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_role_staff_search_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_role_staff_select_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_staff_search_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_staff_select_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_state_bill_search_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_state_bill_select_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_state_ebill_search_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_state_goods_search_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\sp_state_goods_select_Result.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\staff.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\state_bill.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Acess\state_goods.cs">
+      <DependentUpon>DataAcess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Default.cs" />
+    <Compile Include="Presentation Layer\GUI_Import_CheckList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Import_CheckList.Designer.cs">
+      <DependentUpon>GUI_Import_CheckList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Import_Export.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Import_Export.Designer.cs">
+      <DependentUpon>GUI_Import_Export.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Import_Import.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Import_Import.Designer.cs">
+      <DependentUpon>GUI_Import_Import.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Manage_Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Manage_Account.Designer.cs">
+      <DependentUpon>GUI_Manage_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Manage_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Manage_Customer.Designer.cs">
+      <DependentUpon>GUI_Manage_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage.Designer.cs">
+      <DependentUpon>Manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Manage_Customer_add_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Manage_Customer_add_.Designer.cs">
+      <DependentUpon>GUI_Manage_Customer_add_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Manage_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Manage_Product.Designer.cs">
+      <DependentUpon>GUI_Manage_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Manage_Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Manage_Bill.Designer.cs">
+      <DependentUpon>GUI_Manage_Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Manage_Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Manage_Staff.Designer.cs">
+      <DependentUpon>GUI_Manage_Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Statistical_Day.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Statistical_Day.Designer.cs">
+      <DependentUpon>GUI_Statistical_Day.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Statistical_Receive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Statistical_Receive.Designer.cs">
+      <DependentUpon>GUI_Statistical_Receive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Statistical_Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\GUI_Statistical_Staff.Designer.cs">
+      <DependentUpon>GUI_Statistical_Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Manage.resx">
+      <DependentUpon>Manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\GUI_Import_CheckList.resx">
+      <DependentUpon>GUI_Import_CheckList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\GUI_Import_Export.resx">
+      <DependentUpon>GUI_Import_Export.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\GUI_Import_Import.resx">
+      <DependentUpon>GUI_Import_Import.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\GUI_Manage_Account.resx">
+      <DependentUpon>GUI_Manage_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\GUI_Manage_Customer.resx">
+      <DependentUpon>GUI_Manage_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\GUI_Manage_Bill.resx">
+      <DependentUpon>GUI_Manage_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\GUI_Manage_Customer_add_.resx">
+      <DependentUpon>GUI_Manage_Customer_add_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\GUI_Manage_Product.resx">
+      <DependentUpon>GUI_Manage_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\GUI_Manage_Staff.resx">
+      <DependentUpon>GUI_Manage_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\GUI_Statistical_Day.resx">
+      <DependentUpon>GUI_Statistical_Day.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\GUI_Statistical_Receive.resx">
+      <DependentUpon>GUI_Statistical_Receive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\GUI_Statistical_Staff.resx">
+      <DependentUpon>GUI_Statistical_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="Data Acess\DataAcess.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DataAcess.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data Acess\DataAcess.edmx.diagram">
+      <DependentUpon>DataAcess.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data Acess\DataAcess.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataAcess.edmx</DependentUpon>
+      <LastGenOutput>DataAcess.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data Acess\DataAcess.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataAcess.edmx</DependentUpon>
+      <LastGenOutput>DataAcess.cs</LastGenOutput>
+    </Content>
+    <Content Include="Resource\import_check_down_icon.png" />
+    <Content Include="Resource\import_check_up_icon.png" />
+    <Content Include="Resource\import_down_icon.png" />
+    <Content Include="Resource\import_export_down_icon.png" />
+    <Content Include="Resource\import_export_up_icon.png" />
+    <Content Include="Resource\import_import_down_icon.png" />
+    <Content Include="Resource\import_import_up_icon.png" />
+    <Content Include="Resource\import_up_icon.png" />
+    <Content Include="Resource\manage_account_down_icon.png" />
+    <Content Include="Resource\manage_account_up_icon.png" />
+    <Content Include="Resource\manage_bill_down_icon.png" />
+    <Content Include="Resource\manage_bill_up_icon.png" />
+    <Content Include="Resource\manage_customer_down_icon.png" />
+    <Content Include="Resource\manage_customer_up_icon.png" />
+    <Content Include="Resource\manage_product_down_icon.png" />
+    <Content Include="Resource\manage_product_up_icon.png" />
+    <Content Include="Resource\manage_staff_down_icon.png" />
+    <Content Include="Resource\manage_staff_up_icon.png" />
+    <Content Include="Resource\mangage_down_icon.png" />
+    <Content Include="Resource\mangage_up_icon.png" />
+    <Content Include="Resource\sell_down_icon.png" />
+    <Content Include="Resource\sell_up_icon.png" />
+    <Content Include="Resource\statistical_day_down.png" />
+    <Content Include="Resource\statistical_day_up.png" />
+    <Content Include="Resource\statistical_down_icon.png" />
+    <Content Include="Resource\statistical_reciver_down.png" />
+    <Content Include="Resource\statistical_reciver_up.png" />
+    <Content Include="Resource\statistical_staff_down.png" />
+    <Content Include="Resource\statistical_staff_up.png" />
+    <Content Include="Resource\statistical_up_icon.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
