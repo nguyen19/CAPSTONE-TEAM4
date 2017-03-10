@@ -31,8 +31,6 @@
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.dgCustumer = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label20 = new System.Windows.Forms.Label();
             this.txtSearchManageCustomer = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgCustumer)).BeginInit();
@@ -47,6 +45,7 @@
             this.btnAddCustomer.TabIndex = 16;
             this.btnAddCustomer.Text = "+ Khách hàng";
             this.btnAddCustomer.UseVisualStyleBackColor = true;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // button8
             // 
@@ -61,27 +60,12 @@
             // dgCustumer
             // 
             this.dgCustumer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCustumer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.Column7});
             this.dgCustumer.Location = new System.Drawing.Point(48, 111);
             this.dgCustumer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgCustumer.Name = "dgCustumer";
             this.dgCustumer.RowTemplate.Height = 24;
             this.dgCustumer.Size = new System.Drawing.Size(1071, 450);
             this.dgCustumer.TabIndex = 14;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên khách hàng";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 400;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Số điện thoại";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 150;
             // 
             // label20
             // 
@@ -125,8 +109,6 @@
         private System.Windows.Forms.Button btnAddCustomer;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.DataGridView dgCustumer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtSearchManageCustomer;
     }
