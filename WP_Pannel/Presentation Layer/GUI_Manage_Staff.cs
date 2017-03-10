@@ -16,25 +16,41 @@ namespace WP_Pannel.Presentation_Layer
     {
         public Function_Staff busCus;
 
-        CapstoneEnitity dd = new CapstoneEnitity();
         public GUI_Manage_Staff()
         {
             InitializeComponent();
             this.BackColor = GUI_Default.Color_Default;
             this.FormBorderStyle = FormBorderStyle.None;
-           
 
             busCus = new Function_Staff();
-            showStaff();
-
+            
         }
         public void showStaff() {
+            try
+            {
+                this.dg_staff.DataSource = busCus.showStaff();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(GUI_Default.message_staff_dont_show);
+            }
             
         }
 
         private void GUI_Manage_Staff_Load(object sender, EventArgs e)
         {
-            this.dg_staff.DataSource = dd.staffs.ToList();
+            
+        }
+
+        private void btnShowView_Click(object sender, EventArgs e)
+        {
+            showStaff();
+        }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            GUI_Manage_Staff_Add staff_add = new GUI_Manage_Staff_Add();
+            staff_add.Show();
         }
     }
 }

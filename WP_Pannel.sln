@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP_Pannel", "WP_Pannel\WP_Pannel.csproj", "{C63F17C2-7D7F-4651-B01B-07D1692FCFBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication6", "E:\VLU\CAPSTOON\Application\giaodien\WindowsFormsApplication6\WindowsFormsApplication6\WindowsFormsApplication6.csproj", "{2E819DE8-5E60-4A5B-B266-B72EAC203007}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C63F17C2-7D7F-4651-B01B-07D1692FCFBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C63F17C2-7D7F-4651-B01B-07D1692FCFBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C63F17C2-7D7F-4651-B01B-07D1692FCFBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E819DE8-5E60-4A5B-B266-B72EAC203007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E819DE8-5E60-4A5B-B266-B72EAC203007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E819DE8-5E60-4A5B-B266-B72EAC203007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E819DE8-5E60-4A5B-B266-B72EAC203007}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

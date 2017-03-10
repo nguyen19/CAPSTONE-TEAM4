@@ -21,7 +21,7 @@ namespace WP_Pannel.Business_Layer
         {
             try
             {
-                //dEntity.sp_staff_insert(s.id);
+                dEntity.sp_staff_insert(s.birthday_staff, s.name_staff, s.username_staff, s.pass_staff, s.address_staff, s.mobile_staff, s.id_role);
                 return true;
             }
             catch (Exception d)
