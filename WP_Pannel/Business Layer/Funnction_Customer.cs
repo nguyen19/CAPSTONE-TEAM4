@@ -32,7 +32,7 @@ namespace WP_Pannel.Business_Layer
         }
         public string idCustomer()
         {
-            return "KH" + DateTime.UtcNow;
+            return "KH" + DateTime.Now.Date;
         }//get id customer
 
     }
