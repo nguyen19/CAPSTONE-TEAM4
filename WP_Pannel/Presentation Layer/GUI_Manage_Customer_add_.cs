@@ -49,5 +49,14 @@ namespace WP_Pannel.Presentation_Layer
             }
 
         }
+
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            txt_customer_address.Clear();
+            txt_customer_mail.Clear();
+            txt_customer_name.Clear();
+            txt_customer_phone.Clear();
+            txt_customer_tax.Clear();
+        }
     }
 }

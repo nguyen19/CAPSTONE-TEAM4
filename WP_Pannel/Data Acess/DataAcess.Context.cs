@@ -1249,13 +1249,22 @@ namespace WP_Pannel.Data_Acess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_categories_search_Result>("sp_categories_search", key_searchParameter);
         }
     
-        public virtual ObjectResult<sp_customer_search_Result> sp_customer_search(string key_search)
+        public virtual ObjectResult<customer> sp_customer_search(string key_search)
         {
             var key_searchParameter = key_search != null ?
                 new ObjectParameter("key_search", key_search) :
                 new ObjectParameter("key_search", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_customer_search_Result>("sp_customer_search", key_searchParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<customer>("sp_customer_search", key_searchParameter);
+        }
+    
+        public virtual ObjectResult<customer> sp_customer_search(string key_search, MergeOption mergeOption)
+        {
+            var key_searchParameter = key_search != null ?
+                new ObjectParameter("key_search", key_search) :
+                new ObjectParameter("key_search", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<customer>("sp_customer_search", mergeOption, key_searchParameter);
         }
     
         public virtual ObjectResult<sp_goods_search_Result> sp_goods_search(string key_search)

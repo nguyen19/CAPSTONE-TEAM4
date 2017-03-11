@@ -43,6 +43,7 @@
             this.date_customer_create = new System.Windows.Forms.DateTimePicker();
             this.date_customer_update = new System.Windows.Forms.DateTimePicker();
             this.btn_add_customer_save = new System.Windows.Forms.Button();
+            this.btnclear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -159,7 +160,7 @@
             // 
             // btn_add_customer_save
             // 
-            this.btn_add_customer_save.Location = new System.Drawing.Point(282, 191);
+            this.btn_add_customer_save.Location = new System.Drawing.Point(675, 201);
             this.btn_add_customer_save.Name = "btn_add_customer_save";
             this.btn_add_customer_save.Size = new System.Drawing.Size(122, 49);
             this.btn_add_customer_save.TabIndex = 19;
@@ -167,11 +168,22 @@
             this.btn_add_customer_save.UseVisualStyleBackColor = true;
             this.btn_add_customer_save.Click += new System.EventHandler(this.btn_add_customer_save_Click);
             // 
+            // btnclear
+            // 
+            this.btnclear.Location = new System.Drawing.Point(803, 201);
+            this.btnclear.Name = "btnclear";
+            this.btnclear.Size = new System.Drawing.Size(122, 49);
+            this.btnclear.TabIndex = 20;
+            this.btnclear.Text = "Làm mới";
+            this.btnclear.UseVisualStyleBackColor = true;
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
+            // 
             // GUI_Manage_Customer_add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(937, 262);
+            this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btn_add_customer_save);
             this.Controls.Add(this.date_customer_update);
             this.Controls.Add(this.date_customer_create);
@@ -211,5 +223,6 @@
         private System.Windows.Forms.DateTimePicker date_customer_create;
         private System.Windows.Forms.DateTimePicker date_customer_update;
         private System.Windows.Forms.Button btn_add_customer_save;
+        private System.Windows.Forms.Button btnclear;
     }
 }

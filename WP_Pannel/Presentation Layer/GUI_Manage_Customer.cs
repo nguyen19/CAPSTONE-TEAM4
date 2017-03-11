@@ -15,6 +15,9 @@ namespace WP_Pannel.Presentation_Layer
     public partial class GUI_Manage_Customer : Form
     {
         public Funnction_Customer busTo;
+        
+
+
         public GUI_Manage_Customer()
         {
             InitializeComponent();
@@ -30,15 +33,18 @@ namespace WP_Pannel.Presentation_Layer
             try
             {
                 this.dgCustumer.DataSource = busTo.showCustomer();
-                this.dgCustumer.Columns["id_customer"].Visible = false;
-                this.dgCustumer.Columns["name_customer"].Visible = false;
-                this.dgCustumer.Columns["phone"].Visible = false;
-                this.dgCustumer.Columns["email"].Visible = false;
-                this.dgCustumer.Columns["address_"].Visible = false;
-                this.dgCustumer.Columns["id_tax"].Visible = false;
-                this.dgCustumer.Columns["create_at"].Visible = false;
-                this.dgCustumer.Columns["update_at"].Visible = false;
-                //this.dgCustumer.Columns["id_tax"].Visible = false;
+                this.dgCustumer.Columns["id_customer"].Visible = true;
+                this.dgCustumer.Columns["id"].Visible = false;
+                this.dgCustumer.Columns["name_customer"].Visible = true;
+                this.dgCustumer.Columns["phone"].Visible = true;
+                this.dgCustumer.Columns["email"].Visible = true;
+                this.dgCustumer.Columns["address_"].Visible = true;
+                this.dgCustumer.Columns["active"].Visible = false;
+                this.dgCustumer.Columns["id_tax"].Visible = true;
+                this.dgCustumer.Columns["create_at"].Visible = true;
+                this.dgCustumer.Columns["update_at"].Visible = true;
+                this.dgCustumer.Columns["bills"].Visible = false;
+
 
                 dgCustumer.Columns["name_customer"].HeaderCell.Value = "Tền KH";
                 dgCustumer.Columns["phone"].HeaderCell.Value = "Số ĐT";
@@ -46,9 +52,7 @@ namespace WP_Pannel.Presentation_Layer
                 dgCustumer.Columns["address_"].HeaderCell.Value = "Địa chỉ";
                 dgCustumer.Columns["id_tax"].HeaderCell.Value = "Mã số thuế";
                 dgCustumer.Columns["create_at"].HeaderCell.Value = "Ngày tạo";
-                //dgCustumer.Columns["update_at"].HeaderCell.Value = "Số ĐT";
-
-
+                dgCustumer.Columns["update_at"].HeaderCell.Value = "Ngày cập nhật";
 
 
                 dgCustumer.Columns["name_customer"].Width = 155;
@@ -57,12 +61,13 @@ namespace WP_Pannel.Presentation_Layer
                 dgCustumer.Columns["address_"].Width = 155;
                 dgCustumer.Columns["id_tax"].Width = 155;
                 dgCustumer.Columns["create_at"].Width = 155;
+                dgCustumer.Columns["update_at"].Width = 155;
 
             }
             catch (Exception e)
             {
-                MessageBox.Show(GUI_Default.message_staff_dont_show);
-                
+                MessageBox.Show(GUI_Default.message_customer_dont_show);
+                //MENU_ID = 0;
             }
         }
 
@@ -79,6 +84,31 @@ namespace WP_Pannel.Presentation_Layer
         {
             GUI_Manage_Customer_add aa = new GUI_Manage_Customer_add();
             aa.Show();
+        }
+
+        private void btnEditCustomer_Click(object sender, EventArgs e)
+        {
+            GUI_Manage_Customer_Edit bb = new GUI_Manage_Customer_Edit();
+            bb.Show();
+        }
+
+        private void btnSearchCustomer_Click(object sender, EventArgs e)
+        {
+            if (txtSearchManageCustomer.Text.Trim().Equals(""))
+            {
+                MessageBox.Show(GUI_Default.message_customer_search_null);
+                return;
+            }
+            dgCustumer.DataSource = busTo.searchCustomer(txtSearchManageCustomer.Text.Trim());
+
+            if (dgCustumer.RowCount == 0)
+                MessageBox.Show(txtSearchManageCustomer.Text.Trim() + GUI_Default.message_customer_search_notexist);
+
+        }
+
+        private void btnShowCus_Click(object sender, EventArgs e)
+        {
+            showCustomer();
         }
     }
 }

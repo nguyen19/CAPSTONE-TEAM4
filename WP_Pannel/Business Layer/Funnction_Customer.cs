@@ -30,6 +30,15 @@ namespace WP_Pannel.Business_Layer
                 return false;
             }
         }
+
+        public List<customer> searchCustomer(String keysearch)
+        {
+            
+               return dEntity.sp_customer_search(keysearch).ToList<customer>();
+                //dEntity.sp_customer_search(c.id_customer, c.name_customer, c.phone, c.email, c.address_, c.id_tax, c.active, c.create_at, c.update_at);
+             
+        }
+
         public string idCustomer()
         {
             return "KH" + DateTime.Now.Date;

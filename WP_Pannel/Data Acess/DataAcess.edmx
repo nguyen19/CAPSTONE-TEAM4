@@ -1690,7 +1690,7 @@ FROM [sys].[database_firewall_rules] AS [database_firewall_rules]</DefiningQuery
           <FunctionImport Name="sp_categories_search" ReturnType="Collection(CapstoneModel.sp_categories_search_Result)">
             <Parameter Name="key_search" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="sp_customer_search" ReturnType="Collection(CapstoneModel.sp_customer_search_Result)">
+          <FunctionImport Name="sp_customer_search" EntitySet="customers" ReturnType="Collection(CapstoneModel.customer)">
             <Parameter Name="key_search" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_goods_search" ReturnType="Collection(CapstoneModel.sp_goods_search_Result)">
@@ -2576,20 +2576,6 @@ FROM [sys].[database_firewall_rules] AS [database_firewall_rules]</DefiningQuery
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_customer_search" FunctionName="CapstoneModel.Store.sp_customer_search">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="CapstoneModel.sp_customer_search_Result">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="id_customer" ColumnName="id_customer" />
-                <ScalarProperty Name="name_customer" ColumnName="name_customer" />
-                <ScalarProperty Name="phone" ColumnName="phone" />
-                <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="address_" ColumnName="address_" />
-                <ScalarProperty Name="id_tax" ColumnName="id_tax" />
-                <ScalarProperty Name="active" ColumnName="active" />
-                <ScalarProperty Name="create_at" ColumnName="create_at" />
-                <ScalarProperty Name="update_at" ColumnName="update_at" />
-              </ComplexTypeMapping>
-            </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_goods_search" FunctionName="CapstoneModel.Store.sp_goods_search">
             <ResultMapping>
