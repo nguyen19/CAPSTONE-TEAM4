@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -36,7 +35,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt_customer_id = new System.Windows.Forms.TextBox();
             this.txt_customer_name = new System.Windows.Forms.TextBox();
             this.txt_customer_phone = new System.Windows.Forms.TextBox();
             this.txt_customer_mail = new System.Windows.Forms.TextBox();
@@ -45,18 +43,7 @@
             this.date_customer_create = new System.Windows.Forms.DateTimePicker();
             this.date_customer_update = new System.Windows.Forms.DateTimePicker();
             this.btn_add_customer_save = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_customer_active = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID";
             // 
             // label2
             // 
@@ -70,7 +57,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 101);
+            this.label3.Location = new System.Drawing.Point(32, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 17);
             this.label3.TabIndex = 2;
@@ -79,7 +66,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 164);
+            this.label4.Location = new System.Drawing.Point(32, 111);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 17);
             this.label4.TabIndex = 3;
@@ -106,7 +93,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(32, 198);
+            this.label7.Location = new System.Drawing.Point(456, 167);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 17);
             this.label7.TabIndex = 6;
@@ -121,17 +108,9 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "Ngày cập nhật";
             // 
-            // txt_customer_id
-            // 
-            this.txt_customer_id.Location = new System.Drawing.Point(115, 69);
-            this.txt_customer_id.Name = "txt_customer_id";
-            this.txt_customer_id.ReadOnly = true;
-            this.txt_customer_id.Size = new System.Drawing.Size(289, 22);
-            this.txt_customer_id.TabIndex = 9;
-            // 
             // txt_customer_name
             // 
-            this.txt_customer_name.Location = new System.Drawing.Point(115, 101);
+            this.txt_customer_name.Location = new System.Drawing.Point(115, 74);
             this.txt_customer_name.Name = "txt_customer_name";
             this.txt_customer_name.Size = new System.Drawing.Size(289, 22);
             this.txt_customer_name.TabIndex = 10;
@@ -145,14 +124,14 @@
             // 
             // txt_customer_mail
             // 
-            this.txt_customer_mail.Location = new System.Drawing.Point(115, 164);
+            this.txt_customer_mail.Location = new System.Drawing.Point(115, 106);
             this.txt_customer_mail.Name = "txt_customer_mail";
             this.txt_customer_mail.Size = new System.Drawing.Size(289, 22);
             this.txt_customer_mail.TabIndex = 12;
             // 
             // txt_customer_tax
             // 
-            this.txt_customer_tax.Location = new System.Drawing.Point(115, 198);
+            this.txt_customer_tax.Location = new System.Drawing.Point(558, 167);
             this.txt_customer_tax.Name = "txt_customer_tax";
             this.txt_customer_tax.Size = new System.Drawing.Size(289, 22);
             this.txt_customer_tax.TabIndex = 13;
@@ -180,7 +159,7 @@
             // 
             // btn_add_customer_save
             // 
-            this.btn_add_customer_save.Location = new System.Drawing.Point(115, 256);
+            this.btn_add_customer_save.Location = new System.Drawing.Point(282, 191);
             this.btn_add_customer_save.Name = "btn_add_customer_save";
             this.btn_add_customer_save.Size = new System.Drawing.Size(122, 49);
             this.btn_add_customer_save.TabIndex = 19;
@@ -188,29 +167,11 @@
             this.btn_add_customer_save.UseVisualStyleBackColor = true;
             this.btn_add_customer_save.Click += new System.EventHandler(this.btn_add_customer_save_Click);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(456, 169);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 17);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Active";
-            // 
-            // txt_customer_active
-            // 
-            this.txt_customer_active.Location = new System.Drawing.Point(558, 169);
-            this.txt_customer_active.Name = "txt_customer_active";
-            this.txt_customer_active.Size = new System.Drawing.Size(289, 22);
-            this.txt_customer_active.TabIndex = 21;
-            // 
             // GUI_Manage_Customer_add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(937, 510);
-            this.Controls.Add(this.txt_customer_active);
-            this.Controls.Add(this.label9);
+            this.ClientSize = new System.Drawing.Size(937, 262);
             this.Controls.Add(this.btn_add_customer_save);
             this.Controls.Add(this.date_customer_update);
             this.Controls.Add(this.date_customer_create);
@@ -219,7 +180,6 @@
             this.Controls.Add(this.txt_customer_mail);
             this.Controls.Add(this.txt_customer_phone);
             this.Controls.Add(this.txt_customer_name);
-            this.Controls.Add(this.txt_customer_id);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -227,7 +187,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "GUI_Manage_Customer_add";
             this.Text = "Thêm KH";
@@ -237,8 +196,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -246,7 +203,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_customer_id;
         private System.Windows.Forms.TextBox txt_customer_name;
         private System.Windows.Forms.TextBox txt_customer_phone;
         private System.Windows.Forms.TextBox txt_customer_mail;
@@ -255,7 +211,5 @@
         private System.Windows.Forms.DateTimePicker date_customer_create;
         private System.Windows.Forms.DateTimePicker date_customer_update;
         private System.Windows.Forms.Button btn_add_customer_save;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_customer_active;
     }
 }

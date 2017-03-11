@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WP_Pannel.Data_Acess;
-using WP_Pannel.Data_Acess;
 namespace WP_Pannel.Business_Layer
 {
     public class Function_Staff : Function

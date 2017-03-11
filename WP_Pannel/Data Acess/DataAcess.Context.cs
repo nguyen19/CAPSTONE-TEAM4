@@ -500,9 +500,14 @@ namespace WP_Pannel.Data_Acess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_customer_insert", id_customerParameter, name_customerParameter, phoneParameter, emailParameter, address_Parameter, id_taxParameter, activeParameter, create_atParameter, update_atParameter);
         }
     
-        public virtual ObjectResult<sp_customer_select_Result> sp_customer_select()
+        public virtual ObjectResult<customer> sp_customer_select()
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_customer_select_Result>("sp_customer_select");
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<customer>("sp_customer_select");
+        }
+    
+        public virtual ObjectResult<customer> sp_customer_select(MergeOption mergeOption)
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<customer>("sp_customer_select", mergeOption);
         }
     
         public virtual int sp_customer_update(Nullable<int> id, string id_customer, string name_customer, string phone, string email, string address_, string id_tax, Nullable<byte> active, Nullable<System.DateTime> create_at, Nullable<System.DateTime> update_at)

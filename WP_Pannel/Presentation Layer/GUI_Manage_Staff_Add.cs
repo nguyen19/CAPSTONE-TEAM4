@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WP_Pannel.Business_Layer;
 using WP_Pannel.Data_Acess;
-
+using System.Globalization;
+using System.Threading;
 namespace WP_Pannel.Presentation_Layer
 {
     public partial class GUI_Manage_Staff_Add : Form
@@ -18,8 +19,15 @@ namespace WP_Pannel.Presentation_Layer
 
         public GUI_Manage_Staff_Add()
         {
-            InitializeComponent();
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("vi-VN");
+            InitializeComponent();           
+            setDefault();
+        }
+
+        private void setDefault() {
             busStaff = new Function_Staff();
+            dtBirthDay.Format = DateTimePickerFormat.Short;
+            this.BackColor = GUI_Default.Color_Default;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -38,7 +46,8 @@ namespace WP_Pannel.Presentation_Layer
             newStaff.mobile_staff = txtMobile.Text;
             newStaff.id_role = 1;
             if (busStaff.addStaff(newStaff)) {
-                MessageBox.Show(GUI_Default.message_staff_add_save_yes); 
+                MessageBox.Show(GUI_Default.message_staff_add_save_yes);
+                this.Close();
             }
             else
             {

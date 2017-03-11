@@ -1477,7 +1477,7 @@ FROM [sys].[database_firewall_rules] AS [database_firewall_rules]</DefiningQuery
             <Parameter Name="create_at" Mode="In" Type="DateTime" />
             <Parameter Name="update_at" Mode="In" Type="DateTime" />
           </FunctionImport>
-          <FunctionImport Name="sp_customer_select" ReturnType="Collection(CapstoneModel.sp_customer_select_Result)" />
+          <FunctionImport Name="sp_customer_select" EntitySet="customers" ReturnType="Collection(CapstoneModel.customer)" />
           <FunctionImport Name="sp_customer_update">
             <Parameter Name="id" Mode="In" Type="Int32" />
             <Parameter Name="id_customer" Mode="In" Type="String" />
@@ -2356,20 +2356,6 @@ FROM [sys].[database_firewall_rules] AS [database_firewall_rules]</DefiningQuery
           <FunctionImportMapping FunctionImportName="sp_customer_delete" FunctionName="CapstoneModel.Store.sp_customer_delete" />
           <FunctionImportMapping FunctionImportName="sp_customer_insert" FunctionName="CapstoneModel.Store.sp_customer_insert" />
           <FunctionImportMapping FunctionImportName="sp_customer_select" FunctionName="CapstoneModel.Store.sp_customer_select">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="CapstoneModel.sp_customer_select_Result">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="id_customer" ColumnName="id_customer" />
-                <ScalarProperty Name="name_customer" ColumnName="name_customer" />
-                <ScalarProperty Name="phone" ColumnName="phone" />
-                <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="address_" ColumnName="address_" />
-                <ScalarProperty Name="id_tax" ColumnName="id_tax" />
-                <ScalarProperty Name="active" ColumnName="active" />
-                <ScalarProperty Name="create_at" ColumnName="create_at" />
-                <ScalarProperty Name="update_at" ColumnName="update_at" />
-              </ComplexTypeMapping>
-            </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_customer_update" FunctionName="CapstoneModel.Store.sp_customer_update" />
           <FunctionImportMapping FunctionImportName="sp_goods_delete" FunctionName="CapstoneModel.Store.sp_goods_delete" />

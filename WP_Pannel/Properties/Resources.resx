@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button_cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\button_cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\button_save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="import_check_down_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\import_check_down_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,8 +172,38 @@
   <data name="manage_product_up_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\manage_product_up_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="manage_staff_add_down_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\manage_staff_add_down_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="manage_staff_add_up_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\manage_staff_add_up_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="manage_staff_delete_down_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\manage_staff_delete_down_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="manage_staff_delete_up_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\manage_staff_delete_up_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="manage_staff_detail_down_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\manage_staff_detail_down_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="manage_staff_detail_up_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\manage_staff_detail_up_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="manage_staff_down_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\manage_staff_down_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="manage_staff_seach_down_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\manage_staff_seach_down_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="manage_staff_seach_up_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\manage_staff_seach_up_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="manage_staff_show_down_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\manage_staff_show_down_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="manage_staff_show_up_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\manage_staff_show_up_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="manage_staff_up_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\manage_staff_up_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

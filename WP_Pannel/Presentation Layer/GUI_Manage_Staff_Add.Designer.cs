@@ -133,10 +133,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(419, 166);
+            this.btnCancel.Location = new System.Drawing.Point(550, 213);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(173, 60);
+            this.btnCancel.Size = new System.Drawing.Size(111, 45);
             this.btnCancel.TabIndex = 23;
             this.btnCancel.Text = "Bỏ qua";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -144,10 +144,10 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(123, 166);
+            this.btnSave.Location = new System.Drawing.Point(382, 213);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(173, 60);
+            this.btnSave.Size = new System.Drawing.Size(111, 45);
             this.btnSave.TabIndex = 24;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -248,7 +248,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(701, 409);
+            this.ClientSize = new System.Drawing.Size(672, 269);
             this.Controls.Add(this.dtBirthDay);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
@@ -271,7 +271,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Name = "GUI_Manage_Staff_Add";
-            this.Text = "Manage Staff Add";
+            this.Text = "Thêm Người Dùng";
             this.ResumeLayout(false);
             this.PerformLayout();
 
